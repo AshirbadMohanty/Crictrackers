@@ -1,0 +1,21 @@
+@use "./variables";
+
+.listcard {
+	width: 100%;
+	background-color: variables.$light-color;
+	padding: 16px 24px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	color: variables.$dark-light-color;
+	gap: 16px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	-o-border-radius: 16px;
+
+	span {
+		font-size: 16px;
+	}
+}

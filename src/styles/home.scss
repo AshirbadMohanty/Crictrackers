@@ -1,0 +1,80 @@
+@use "./variables";
+
+.home {
+	width: 100%;
+	min-height: 100vh;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	background-color: variables.$gray-light;
+	align-items: center;
+
+	@include variables.for-medium-screen {
+		padding: 16px;
+	}
+	@include variables.for-large-screen {
+		padding: 24px;
+	}
+}
+
+.card-container {
+	width: 100%;
+	min-height: 100vh;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	background-color: variables.$gray-light;
+	align-items: center;
+
+	@include variables.for-medium-screen {
+		width: 100%;
+	}
+	@include variables.for-large-screen {
+		width: 80%;
+	}
+	@include variables.for-extralarge-screen {
+		width: 60%;
+	}
+}
+
+.card-grid {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr;
+	gap: 16px;
+
+	@include variables.for-medium-screen {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include variables.for-large-screen {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@include variables.for-extralarge-screen {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.btn {
+	width: 100%;
+	padding: 16px;
+	font-size: 18px;
+	background-color: variables.$primary-color;
+	color: variables.$light-color;
+	border: none;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: center;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+
+	&:hover {
+		background-color: rgba(variables.$primary-color, 0.9);
+	}
+}
